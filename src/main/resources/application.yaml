@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: spring-cloud-gateway
+
+  cloud:
+    gateway: # gateway ????
+      routes: # ??? ???? ?? ??? ???? ??? ????.
+        # route #
+        - id: naver_route
+          uri: https://www.naver.com
+          predicates:
+            - Path=/naver
+            - Method=GET
+
+        # route #3
+        - id: segment #url segment
+          uri: http://localhost:8080
+          predicates:
+            - Path=/segment/** # /segment/ ??? ?? ??? ???.
+            - Method=GET
+          filters:
+            - RewritePath=/segment/(?<segment>.*), /$\{segment} # filter ?? ?? (RewritePath ??)
+server:
+  port: 80
