@@ -1,24 +1,22 @@
 spring:
-  application:
-    name: spring-cloud-gateway
-
   cloud:
-    gateway: # gateway ????
-      routes: # ??? ???? ?? ??? ???? ??? ????.
-        # route #
-        - id: naver_route
-          uri: https://www.naver.com
-          predicates:
-            - Path=/naver
-            - Method=GET
-
-        # route #3
+    gateway: # gateway 설정
+      routes: # 라우팅 목록 설정
+        # route
         - id: segment #url segment
+          uri: http://localhost:8080 # 요청을 보낼 서버
+          predicates: # 라우팅 조건 설정
+            - Path=/segment/** # /segment/ 으로 오는 모든 요청에 대해 처리한다.
+            - Method=GET # GET 요청만 처리한다.
+          filters:
+            - RewritePath=/segment/(?<segment>.*), /$\{segment} # Filter를 통해 요청을 재작성한다. (RewritePath 사용)
+        - id: filter_test
           uri: http://localhost:8080
           predicates:
-            - Path=/segment/** # /segment/ ??? ?? ??? ???.
-            - Method=GET
+            - Path=/filter_test/**
           filters:
-            - RewritePath=/segment/(?<segment>.*), /$\{segment} # filter ?? ?? (RewritePath ??)
+            - AddRequestHeader=X-Request-Test, testRequest # Filter를 통해 요청 헤더를 추가한다. (AddRequestHeader 사용)
+            - AddResponseHeader=X-Response-Test, testResponse # Filter를 통해 응답 헤더를 추가한다. (AddResponseHeader 사용)
+            - RewritePath=/filter_test/(?<filterTest>.*), /$\{filterTest}
 server:
   port: 80
