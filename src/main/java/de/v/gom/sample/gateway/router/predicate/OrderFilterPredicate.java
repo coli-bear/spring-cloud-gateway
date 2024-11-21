@@ -1,4 +1,4 @@
-package de.v.gom.sample.gateway.predicate;
+package de.v.gom.sample.gateway.router.predicate;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.gateway.route.Route;

@@ -1,4 +1,4 @@
-package de.v.gom.sample.gateway.predicate;
+package de.v.gom.sample.gateway.router.predicate;
 
 import de.v.gom.sample.gateway.filter.CustomBadGatewayFilter;
 import org.springframework.cloud.gateway.route.Route;
