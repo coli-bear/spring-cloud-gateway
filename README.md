@@ -26,4 +26,5 @@ dependencies {
 
 - [라우팅에 대한 정리](./summary/routing.md)
 - [필터에 대한 정리](./summary/filter.md)
-- [Dynamically Routing](./summary/dynamic-routing_1.md)
+- [Dynamically Routing #1 - RouteDefinitionLocator](./summary/dynamic-routing_1.md)
+- [Dynamically Routing #2 - RouteDefinitionWriter](./summary/dynamic-routing_2.md)
