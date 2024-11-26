@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Flux;
 
-import java.util.HashMap;
 import java.util.Map;
 
 @RestController
@@ -16,7 +15,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class DynamicRoutingController {
     private final DynamicRouting dynamicRouting;
-
+    private final RouteInformationFunction routeInformationFunction;
     @GetMapping
     public Flux<RouteDefinition> getAll() {
         return dynamicRouting.gatAll();
@@ -25,14 +24,12 @@ public class DynamicRoutingController {
     @GetMapping("/predicate")
     public Flux<Map<String, Object>> getRoutePredicate() {
         return dynamicRouting.getAllPredicate()
-            .map(r -> {
-                Map<String, Object> rInfo = new HashMap<>();
-                rInfo.put("id", r.getId());
-                rInfo.put("uri", r.getUri());
-                rInfo.put("predicate", r.getPredicate());
-                // 필터를 직렬화하는데 실패하여 클래스명만 출력
-                rInfo.put("filters", r.getFilters().stream().map(f -> f.getClass().getName()));
-                return rInfo;
-            });
+            .map(this.routeInformationFunction);
     }
+
+    @GetMapping("/inmemory")
+    public Flux<RouteDefinition> getRouteInMemory() {
+        return this.dynamicRouting.getAllInMemory();
+    }
+
 }

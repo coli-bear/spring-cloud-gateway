@@ -1,6 +1,7 @@
 package de.v.gom.sample.gateway.router.service;
 
 import lombok.RequiredArgsConstructor;
+import org.springframework.cloud.gateway.route.InMemoryRouteDefinitionRepository;
 import org.springframework.cloud.gateway.route.Route;
 import org.springframework.cloud.gateway.route.RouteDefinition;
 import org.springframework.cloud.gateway.route.RouteDefinitionLocator;
@@ -16,6 +17,7 @@ public class DynamicRoutingService implements DynamicRouting {
 
     private final RouteDefinitionLocator routeDefinitionLocator;
     private final RouteLocator routeLocator;
+    private final InMemoryRouteDefinitionRepository inMemoryRouteDefinitionRepository;
 
     @Override
     public Flux<RouteDefinition> gatAll() {
@@ -25,6 +27,11 @@ public class DynamicRoutingService implements DynamicRouting {
     @Override
     public Flux<Route> getAllPredicate() {
         return routeLocator.getRoutes();
+    }
+
+    @Override
+    public Flux<RouteDefinition> getAllInMemory() {
+        return inMemoryRouteDefinitionRepository.getRouteDefinitions();
     }
 
     @Override

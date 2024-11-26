@@ -6,5 +6,8 @@ import reactor.core.publisher.Flux;
 
 public interface DynamicRoutingReader {
     Flux<RouteDefinition> gatAll();
+
     Flux<Route> getAllPredicate();
+
+    Flux<RouteDefinition> getAllInMemory();
 }
