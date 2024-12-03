@@ -1,0 +1,47 @@
+### Create route
+POST /v1/routes/in-memory
+Content-Type: application/json
+Host: localhost:8081
+
+{
+  "id": "application-route",
+  "uri": "http://localhost:8080",
+  "predicates": [
+    {
+      "name": "Method",
+      "args": {
+        "method": "GET"
+      }
+    },
+    {
+      "name": "Path",
+      "args": {
+        "pattern": "/application/**"
+      }
+    }
+  ],
+  "filters": [
+    {
+      "name": "RewritePath",
+      "args": {
+        "regexp": "/application/(?<segment>.*)",
+        "replacement": "/v1/application/${segment}"
+      }
+    }
+  ]
+}
+
+### Get route definition
+GET /v1/routes/in-memory
+Host: localhost:8081
+Content-Type: application/json
+
+### Get Route
+GET /v1/routes/in-memory/route
+Host: localhost:8081
+Content-Type: application/json
+
+### 등록된 route에 대해서 요청 테스트
+GET /application/hello
+Host: localhost:8081
+Content-Type: application/json

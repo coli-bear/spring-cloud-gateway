@@ -10,6 +10,8 @@ Spring Cloud Gateway 에 대한 설명은 [Spring Cloud Gateway](https://spring.
 root -|
       |- src : Spring Cloud Gateway 의 소스코드가 존재 
       |- application-1 : Spring Cloud Gateway 가 라우팅 하기 위한 서버 1
+      |- gateway-in-memory : Spring Cloud Gateway 의 InMemoryRouteDefinitionRepository 기반의 Dynamic Routing 을 위한 샘플 프로젝트
+      |- gateway-redis : Spring Cloud Gateway 의 RedisRouteDefinitionRepository 기반의 Dynamic Routing 을 위한 샘플 프로젝트
 ```
 ## 필요 의존성 주입
 
@@ -28,3 +30,4 @@ dependencies {
 - [필터에 대한 정리](./summary/filter.md)
 - [Dynamically Routing #1 - RouteDefinitionLocator](./summary/dynamic-routing_1.md)
 - [Dynamically Routing #2 - RouteDefinitionWriter](./summary/dynamic-routing_2.md)
+- [Dynamically Routing #3 - Implementation](./summary/dynamic-routing_3.md)
