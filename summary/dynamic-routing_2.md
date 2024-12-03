@@ -276,3 +276,5 @@ dependencies {
 
 추가하게 되면 `ReactiveRedisTemplate` 객체가 주입된것을 확인할 수 있다. (사진 캡처 힘드니 직접 객체 찾아봅시다)
 
+- [이전: Dynamic Routing #1 - RouteDefinitionLocator](./dynamic-routing_1.md)
+- [다음: Dynamic Routing #3 - Implementation - InMemoryRouteDefinitionRepository](./dynamic-routing_3.md)

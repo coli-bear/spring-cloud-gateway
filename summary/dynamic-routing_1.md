@@ -475,3 +475,6 @@ public class DynamicRoutingController {
 이제 `RouteDefinitionWriter` 를 이용하여 Route 를 추가, 삭제, 수정하는 방법을 알아보겠다.
 
 > 너무 길어서 다음 글에서 정리하겠다.
+
+- [이전: Gateway Filter](./filter.md)
+- [다음: Dynamic Routing... #2 - RouteDefinitionWriter](./dynamic-routing_2.md)

@@ -28,7 +28,7 @@ dependencies {
 
 - [라우팅에 대한 정리](./summary/routing.md)
 - [필터에 대한 정리](./summary/filter.md)
-- [Dynamically Routing #1 - RouteDefinitionLocator](./summary/dynamic-routing_1.md)
-- [Dynamically Routing #2 - RouteDefinitionWriter](./summary/dynamic-routing_2.md)
-- [Dynamically Routing #3 - Implementation - InMemoryRouteDefinitionRepository](./summary/dynamic-routing_3.md)
-- [Dynamically Routing #3 - Implementation - RedisRouteDefinitionRepository](./summary/dynamic-routing_4.md)
+- [Dynamic Routing #1 - RouteDefinitionLocator](./summary/dynamic-routing_1.md)
+- [Dynamic Routing #2 - RouteDefinitionWriter](./summary/dynamic-routing_2.md)
+- [Dynamic Routing #3 - Implementation - InMemoryRouteDefinitionRepository](./summary/dynamic-routing_3.md)
+- [Dynamic Routing #4 - Implementation - RedisRouteDefinitionRepository](./summary/dynamic-routing_4.md)

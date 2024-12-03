@@ -270,9 +270,11 @@ application: hello
 Response code: 200 (OK); Time: 358ms (358 ms); Content length: 18 bytes (18 B)
 ```
 
-기대하는 결과가 정상적으로 출력되는거슬 확인할 수 있다. 
+기대하는 결과가 정상적으로 출력되는것을 확인할 수 있다. 
 
 ## 정리
 
 이번에는 InMemoryRouteDefinitionRepository 를 구현해서 Dynamic Routing 을 구현해보았다. 다음 정리에서 redis 를 이용한 구현을 해보겠다.
 
+- [이전: Dynamic Routing... #2 - RouteDefinitionWriter](./dynamic-routing_2.md)
+- [다음: Dynamic Routing... #4 - Implementation - RedisRouteDefinitionRepository](./dynamic-routing_4.md)
