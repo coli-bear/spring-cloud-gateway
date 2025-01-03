@@ -12,6 +12,7 @@ root -|
       |- application-1 : Spring Cloud Gateway 가 라우팅 하기 위한 서버 1
       |- gateway-in-memory : Spring Cloud Gateway 의 InMemoryRouteDefinitionRepository 기반의 Dynamic Routing 을 위한 샘플 프로젝트
       |- gateway-redis : Spring Cloud Gateway 의 RedisRouteDefinitionRepository 기반의 Dynamic Routing 을 위한 샘플 프로젝트
+      |- gateway-parsing : Spring Cloud Gateway를 Route 진행시 filter 를 통해서 요청과 응답을 Parsing 하는 샘플 프로젝트 (참고: WebMVC 도 여기에 구현함)
 ```
 ## 필요 의존성 주입
 
