@@ -27,9 +27,10 @@ dependencies {
 
 ## 기능 정리 목차 
 
-- [라우팅에 대한 정리](./summary/routing.md)
-- [필터에 대한 정리](./summary/filter.md)
-- [Dynamic Routing #1 - RouteDefinitionLocator](./summary/dynamic-routing_1.md)
-- [Dynamic Routing #2 - RouteDefinitionWriter](./summary/dynamic-routing_2.md)
-- [Dynamic Routing #3 - Implementation - InMemoryRouteDefinitionRepository](./summary/dynamic-routing_3.md)
-- [Dynamic Routing #4 - Implementation - RedisRouteDefinitionRepository](./summary/dynamic-routing_4.md)
+- [01. 라우팅에 대한 정리](./summary/routing.md)
+- [02. 필터에 대한 정리](./summary/filter.md)
+- [03. Dynamic Routing #1 - RouteDefinitionLocator](./summary/dynamic-routing_1.md)
+- [04. Dynamic Routing #2 - RouteDefinitionWriter](./summary/dynamic-routing_2.md)
+- [05. Dynamic Routing #3 - Implementation - InMemoryRouteDefinitionRepository](./summary/dynamic-routing_3.md)
+- [06. Dynamic Routing #4 - Implementation - RedisRouteDefinitionRepository](./summary/dynamic-routing_4.md)
+- [07. Response Body Parsing](./summary/parsing.md)

@@ -1,4 +1,4 @@
-# Dynamic Routing... #3 - Implementation - InMemoryRouteDefinitionRepository
+# 05. Dynamic Routing... #3 - Implementation - InMemoryRouteDefinitionRepository
 
 여기서부터 Spring Cloud Gateway 에서 Dynamic Routing 을 구현하는 방법에 대해 정리하겠다. 
 

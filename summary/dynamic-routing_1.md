@@ -1,4 +1,4 @@
-# Dynamic Routing... #1 - RouteDefinitionLocator
+# 03. Dynamic Routing... #1 - RouteDefinitionLocator
 
 Spring Cloud Gateway 에서는 라우팅을 동적으로 변경할 수 있는 기능을 제공한다. 이 기능은 `RouteDefinitionLocator` 를 이용하여 라우팅을 변경할 수 있다.
 

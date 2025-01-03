@@ -1,4 +1,4 @@
-# Dynamic Routing... #4 - Implementation - RedisRouteDefinitionRepository
+# 06. Dynamic Routing... #4 - Implementation - RedisRouteDefinitionRepository
 
 이번에는 레디스에 지정된 Routing 정보를 저장하고 불러오도록 해보자. 
 
