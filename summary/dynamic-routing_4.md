@@ -320,4 +320,5 @@ Response code: 200 (OK); Time: 358ms (358 ms); Content length: 18 bytes (18 B)
 
 이번 챕터는 여기까지 하겠다. 다음 챕터에서는 Load Balancer 에 대해서 알아보겠다. 
 
-- [이전: Dynamic Routing... #3 - Implementation - InMemoryRouteDefinitionRepository](./dynamic-routing_3.md)
+- [이전: 05. Dynamic Routing... #3 - Implementation - InMemoryRouteDefinitionRepository](./dynamic-routing_3.md)
+- [다음: 07. Response Body Parsing](../parsing.md)
